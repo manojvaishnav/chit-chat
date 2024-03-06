@@ -51,7 +51,7 @@ const ResetPassword = () => {
       const form = new FormData()
       form.append('token', token)
       form.append('newPassword', password)
-      await axios.post(`http://localhost:5000/api/v1/user/password/reset-password`, form).then(() => {
+      await axios.post(`https://chit-chat-6id8.onrender.com/api/v1/user/password/reset-password`, form).then(() => {
         toast({
           title: 'Password Changed',
           status: 'success',

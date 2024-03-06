@@ -14,7 +14,7 @@ const Status = ({ story, handleStatusDelete }) => {
     const getStatusButton = async (storyId) => {
         onOpen()
         setIsLoading(true)
-        const { data } = await axios.get(`http://localhost:5000/api/v1/user/story/${storyId}`, {
+        const { data } = await axios.get(`https://chit-chat-6id8.onrender.com/api/v1/user/story/${storyId}`, {
             headers: {
                 'Authorization': `Bearer ${token}`
             }

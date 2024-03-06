@@ -17,7 +17,7 @@ const EditProfile = ({ getUserProfile }) => {
 
     const getUserDetail = async () => {
         try {
-            await axios.get(`http://localhost:5000/api/v1/user/${username}`, {
+            await axios.get(`https://chit-chat-6id8.onrender.com/api/v1/user/${username}`, {
                 headers: {
                     'Authorization': `Bearer ${token}`
                 }
@@ -59,7 +59,7 @@ const EditProfile = ({ getUserProfile }) => {
             form.append('email', userEmail)
             form.append('profile', userProfile)
 
-            await axios.put('http://localhost:5000/api/v1/user/', form, {
+            await axios.put('https://chit-chat-6id8.onrender.com/api/v1/user/', form, {
                 headers: {
                     'Authorization': `Bearer ${token}`
                 }

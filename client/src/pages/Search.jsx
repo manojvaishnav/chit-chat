@@ -31,7 +31,7 @@ const SearchBox = () => {
     const getAllUsersList = async () => {
         setisLoading(true);
         try {
-            await axios.get('http://localhost:5000/api/v1/user/all/list', {
+            await axios.get('https://chit-chat-6id8.onrender.com/api/v1/user/all/list', {
                 headers: {
                     'Authorization': `Bearer ${token}`
                 }

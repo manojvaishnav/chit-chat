@@ -16,7 +16,7 @@ const Home = () => {
   const checkLogin = async () => {
     if (token) {
       try {
-        await axios.post('http://localhost:5000/api/v1/user/verify', { token });
+        await axios.post('https://chit-chat-6id8.onrender.com/api/v1/user/verify', { token });
       } catch (error) {
         navigate('/login')
       }
@@ -28,7 +28,7 @@ const Home = () => {
   const getFollowingPosts = async () => {
     setIsLoading(true)
     try {
-      const response = await axios.get('http://localhost:5000/api/v1/followingposts', {
+      const response = await axios.get('https://chit-chat-6id8.onrender.com/api/v1/followingposts', {
         headers: {
           'Authorization': `Bearer ${token}`
         }
@@ -42,7 +42,7 @@ const Home = () => {
 
   const getStatus = async () => {
     try {
-      const { data } = await axios.get('http://localhost:5000/api/v1/user/following/story', {
+      const { data } = await axios.get('https://chit-chat-6id8.onrender.com/api/v1/user/following/story', {
         headers: {
           'Authorization': `Bearer ${token}`
         }

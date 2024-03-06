@@ -69,7 +69,7 @@ const RegistrationForm = () => {
                 form.append('password', password)
                 form.append('profile', profile)
 
-                const result = await axios.post('http://localhost:5000/api/v1/user/signup', form)
+                const result = await axios.post('https://chit-chat-6id8.onrender.com/api/v1/user/signup', form)
                 if (result.data.user) {
                     const { name, email, userName, profile, _id } = result.data.user
                     const { token } = result.data

@@ -12,7 +12,7 @@ const Messages = () => {
     const token = localStorage.getItem('tokenValue')
     try {
       setIsLoading(true)
-      await axios.get(`http://localhost:5000/api/v1/chat`, {
+      await axios.get(`https://chit-chat-6id8.onrender.com/api/v1/chat`, {
         headers: {
           'Authorization': `Bearer ${token}`
         }

@@ -9,7 +9,7 @@ import { IoArrowBackOutline } from 'react-icons/io5';
 import axios from "axios";
 import { io } from 'socket.io-client'
 
-const ENDPOINT = 'http://localhost:5000';
+const ENDPOINT = 'https://chit-chat-6id8.onrender.com';
 
 var socket, selectedChatCompare;
 
@@ -36,7 +36,7 @@ const Chat = () => {
 
   const fetchAllMessages = async () => {
     try {
-      const { data } = await axios.get(`http://localhost:5000/api/v1/message/${chatId}`, {
+      const { data } = await axios.get(`https://chit-chat-6id8.onrender.com/api/v1/message/${chatId}`, {
         headers: {
           'Authorization': `Bearer ${token}`
         }
@@ -58,7 +58,7 @@ const Chat = () => {
       const form = new FormData()
       form.append('content', inputMessage)
       form.append('chatId', chatId)
-      const { data } = await axios.post(`http://localhost:5000/api/v1/message/`, form, {
+      const { data } = await axios.post(`https://chit-chat-6id8.onrender.com/api/v1/message/`, form, {
         headers: {
           'Authorization': `Bearer ${token}`
         }

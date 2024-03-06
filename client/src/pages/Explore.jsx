@@ -11,7 +11,7 @@ const Explore = () => {
   const getAllPosts = async () => {
     const yourBearerToken = localStorage.getItem('tokenValue')
     try {
-      await axios.get('http://localhost:5000/api/v1/posts/', {
+      await axios.get('https://chit-chat-6id8.onrender.com/api/v1/posts/', {
         headers: {
           'Authorization': `Bearer ${yourBearerToken}`
         }

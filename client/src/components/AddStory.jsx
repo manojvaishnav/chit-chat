@@ -17,7 +17,7 @@ const AddStory = () => {
     const handlePostStoryButton = async () => {
         onClose()
         try {
-            await axios.post(`http://localhost:5000/api/v1/user/story`, {
+            await axios.post(`https://chit-chat-6id8.onrender.com/api/v1/user/story`, {
                 storyText: storyText,
                 textFont: fontValue,
                 expire: expireTime
@@ -41,7 +41,7 @@ const AddStory = () => {
 
     const getStory = async () => {
         try {
-            await axios.get(`http://localhost:5000/api/v1/user/story/login/story`, {
+            await axios.get(`https://chit-chat-6id8.onrender.com/api/v1/user/story/login/story`, {
                 headers: {
                     'Authorization': `Bearer ${token}`
                 }
@@ -56,7 +56,7 @@ const AddStory = () => {
 
     const handleStatusDelete = async (storyId) => {
         try {
-            await axios.delete(`http://localhost:5000/api/v1/user/story/${storyId}`, {
+            await axios.delete(`https://chit-chat-6id8.onrender.com/api/v1/user/story/${storyId}`, {
                 headers: {
                     'Authorization': `Bearer ${token}`
                 }

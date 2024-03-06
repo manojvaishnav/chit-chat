@@ -9,7 +9,7 @@ const SavedPost = () => {
   const getSavedPosts = async () => {
     const token = localStorage.getItem('tokenValue')
     try {
-      await axios.get(`http://localhost:5000/api/v1/posts/saved`, {
+      await axios.get(`https://chit-chat-6id8.onrender.com/api/v1/posts/saved`, {
         headers: {
           'Authorization': `Bearer ${token}`
         }

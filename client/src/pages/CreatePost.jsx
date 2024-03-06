@@ -69,7 +69,7 @@ const CreatePost = () => {
       const form = new FormData()
       form.append('description', desc)
       form.append('photo', file)
-      const result = await axios.post('http://localhost:5000/api/v1/post/', form, {
+      const result = await axios.post('https://chit-chat-6id8.onrender.com/api/v1/post/', form, {
         headers: {
           'Authorization': `Bearer ${bearerToken}`,
         }

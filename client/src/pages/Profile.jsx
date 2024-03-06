@@ -39,7 +39,7 @@ const Profile = () => {
   const getUserProfile = async () => {
     const userId = localStorage.getItem('userId')
     try {
-      await axios.get(`http://localhost:5000/api/v1/user/${username}`, {
+      await axios.get(`https://chit-chat-6id8.onrender.com/api/v1/user/${username}`, {
         headers: {
           'Authorization': `Bearer ${token}`
         }
@@ -64,7 +64,7 @@ const Profile = () => {
 
   const handleFollowButton = async (userId) => {
     try {
-      await axios.post(`http://localhost:5000/api/v1/user/togglefollow/${userId}`, {}, {
+      await axios.post(`https://chit-chat-6id8.onrender.com/api/v1/user/togglefollow/${userId}`, {}, {
         headers: {
           'Authorization': `Bearer ${token}`
         }
@@ -84,7 +84,7 @@ const Profile = () => {
 
   const handelDeletePost = async (postId) => {
     try {
-      await axios.delete(`http://localhost:5000/api/v1/post/${postId}`, {
+      await axios.delete(`https://chit-chat-6id8.onrender.com/api/v1/post/${postId}`, {
         headers: {
           'Authorization': `Bearer ${token}`
         }
@@ -105,7 +105,7 @@ const Profile = () => {
 
   const handleMessageButton = async () => {
     try {
-      const { data } = await axios.post(`http://localhost:5000/api/v1/chat`, { userId: userDetail._id }, {
+      const { data } = await axios.post(`https://chit-chat-6id8.onrender.com/api/v1/chat`, { userId: userDetail._id }, {
         headers: {
           'Authorization': `Bearer ${token}`
         }

@@ -9,7 +9,7 @@ const LikedPost = () => {
     const getLikedPosts = async () => {
         const token = localStorage.getItem('tokenValue')
         try {
-            await axios.get(`http://localhost:5000/api/v1/posts/liked`, {
+            await axios.get(`https://chit-chat-6id8.onrender.com/api/v1/posts/liked`, {
                 headers: {
                     'Authorization': `Bearer ${token}`
                 }

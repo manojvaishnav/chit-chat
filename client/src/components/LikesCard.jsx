@@ -13,7 +13,7 @@ const LikesCard = ({ postId }) => {
     const getLikes = async () => {
         const token = localStorage.getItem('tokenValue')
         try {
-            await axios.get(`http://localhost:5000/api/v1/post/likes/${postId}`, {
+            await axios.get(`https://chit-chat-6id8.onrender.com/api/v1/post/likes/${postId}`, {
                 headers: {
                     'Authorization': `Bearer ${token}`
                 }
@@ -28,7 +28,7 @@ const LikesCard = ({ postId }) => {
     const likeButton = async () => {
         const token = localStorage.getItem('tokenValue')
         try {
-            await axios.post(`http://localhost:5000/api/v1/post/togglelike/${postId}`, {}, {
+            await axios.post(`https://chit-chat-6id8.onrender.com/api/v1/post/togglelike/${postId}`, {}, {
                 headers: {
                     'Authorization': `Bearer ${token}`
                 }

@@ -34,7 +34,7 @@ const LoginForm = () => {
   const handleLoginButton = async () => {
     setIsLoading(true)
     try {
-      const result = await axios.post('http://localhost:5000/api/v1/user/signin', { email, password })
+      const result = await axios.post('https://chit-chat-6id8.onrender.com/api/v1/user/signin', { email, password })
       if (result.data.user) {
         const { name, email, userName, profile, _id } = result.data.user
         const { token } = result.data

@@ -90,7 +90,7 @@ module.exports.forgotPasswordToken = async (req, res) => {
 
         await User.findByIdAndUpdate(user._id, { resetToken, resetTokenExpiration })
 
-        const resetLink = `http://localhost:5000/reset-password?token=${resetToken}`;
+        const resetLink = `https://chit-chat-6id8.onrender.com/reset-password?token=${resetToken}`;
         const emailText = `Click the following link to reset your password: ${resetLink}`;
         await sendMail(email, 'Password Reset', emailText);
 

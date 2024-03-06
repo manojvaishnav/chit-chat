@@ -10,7 +10,7 @@ const SavePostButton = ({ postId }) => {
 
     const getPostSavedStatus = async () => {
         try {
-            await axios.get(`http://localhost:5000/api/v1/posts/saved/`, {
+            await axios.get(`https://chit-chat-6id8.onrender.com/api/v1/posts/saved/`, {
                 headers: {
                     'Authorization': `Bearer ${token}`
                 }
@@ -25,7 +25,7 @@ const SavePostButton = ({ postId }) => {
 
     const handleSavedButton = async (id) => {
         try {
-            await axios.post(`http://localhost:5000/api/v1/posts/saved/${id}`, {}, {
+            await axios.post(`https://chit-chat-6id8.onrender.com/api/v1/posts/saved/${id}`, {}, {
                 headers: {
                     'Authorization': `Bearer ${token}`
                 }

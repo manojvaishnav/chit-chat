@@ -46,7 +46,7 @@ const PostCard = ({ post, handelDeletePost }) => {
 
     const getComments = async (postId) => {
         try {
-            await axios.get(`http://localhost:5000/api/v1/post/comment/${postId}`, {
+            await axios.get(`https://chit-chat-6id8.onrender.com/api/v1/post/comment/${postId}`, {
                 headers: {
                     'Authorization': `Bearer ${token}`
                 }
@@ -69,7 +69,7 @@ const PostCard = ({ post, handelDeletePost }) => {
             })
         }
         try {
-            await axios.post(`http://localhost:5000/api/v1/post/comment/${commentId}`, { comment: commentText }, {
+            await axios.post(`https://chit-chat-6id8.onrender.com/api/v1/post/comment/${commentId}`, { comment: commentText }, {
                 headers: {
                     'Authorization': `Bearer ${token}`
                 }
@@ -92,7 +92,7 @@ const PostCard = ({ post, handelDeletePost }) => {
     const handleDeleteComment = async (postId, commentId) => {
         const token = localStorage.getItem('tokenValue')
         try {
-            await axios.delete(`http://localhost:5000/api/v1/post/comment/${postId}/${commentId}`, {
+            await axios.delete(`https://chit-chat-6id8.onrender.com/api/v1/post/comment/${postId}/${commentId}`, {
                 headers: {
                     'Authorization': `Bearer ${token}`
                 }

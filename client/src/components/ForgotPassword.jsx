@@ -37,7 +37,7 @@ const ForgotPassword = () => {
         try {
             const form = new FormData()
             form.append('email', email)
-            await axios.post(`http://localhost:5000/api/v1/user/password/forgot-password`, form).then(() => {
+            await axios.post(`https://chit-chat-6id8.onrender.com/api/v1/user/password/forgot-password`, form).then(() => {
                 toast({
                     title: 'Reset link sent',
                     status: 'success',
